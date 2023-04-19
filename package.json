@@ -1,13 +1,21 @@
 {
-  "name": "nodejs-streams",
+  "name": "@fefranklin/nodejs-streams",
   "version": "1.0.0",
   "main": "native-stream.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-server": "node webapi.js",
+    "apiOne": "curl localhost:3000 | tee logs/api1.log",
+    "apiTwo": "curl localhost:4000 | tee logs/api2.log",
+    "passthrough": "node passthrough.js | tee logs/passthrough.log",
+    "async": "node async.js | tee logs/async.log"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "axios": "^0.22.0"
+  }
 }
